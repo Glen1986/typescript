@@ -20,3 +20,24 @@ function fullList<T>(array: T[], valor: T) {
     return array.map(() => valor)
 }
 console.log(fullList([1, null, 'c'], 'd'))
+
+interface IUsuario {
+    id: string
+    email: string
+}
+interface IAdmin extends IUsuario {
+    cargo: 'gerente' | 'coordinador' | 'supervisor'
+}
+const lucho: IAdmin = {
+    id: 'lucho',
+    email: 'yo@mail.com',
+    cargo: 'coordinador',
+}
+
+function redireccion(usuario: IUsuario | IAdmin) {
+    if ('cargo' in usuario) {
+        //redirefcciona para area de dministrador
+    }
+    //redirefcciona para area de usuario
+}
+console.log(lucho)
