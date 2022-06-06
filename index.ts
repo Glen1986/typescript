@@ -13,3 +13,10 @@ input.addEventListener('input', (e) => {
 
 //interfaces son utilizadas para definir conratos de estructura de datos de clases
 //y los types para hacer mis de onterfaces en nuestro codigo
+
+//Generic Types
+
+function fullList<T>(array: T[], valor: T) {
+    return array.map(() => valor)
+}
+console.log(fullList([1, null, 'c'], 'd'))
